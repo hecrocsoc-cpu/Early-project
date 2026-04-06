@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-5);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
 :root {
   --font-main: 'Roboto', sans-serif;  
   --color-1: #072AC8;
@@ -10,5 +30,31 @@
   --color-6: #6B708D;
   --color-7: #F2F4FC;
   --color-8: #ECF7FF;
-  --color-9: #FC600;
+  --color-9: #FFC600;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+nav button {
+  background-color: var(--color-1);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
 }
