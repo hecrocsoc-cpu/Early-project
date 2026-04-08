@@ -1,0 +1,71 @@
+/* MAIN */
+main {
+  padding: 4rem;
+}
+
+main h1 {
+  margin-bottom: 2rem;
+}
+
+/* FORM */
+#contact-form {
+width: 100%;  
+max-width: 600px;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+}
+#name{
+    max-width: 1200px;
+}
+/* CAMPOS */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 1200px;
+}
+
+.field label {
+  font-weight: 600;
+}
+
+.field input,
+.field textarea {
+width: 100%;
+max-width: none;
+border: none;
+background-color: var(--color-7);
+padding: 1rem;
+border-radius: 4px;
+font-size: 1rem;
+}
+
+/* TEXTAREA */
+.field textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* BOTÓN */
+#contact-form button {
+  margin: 0;
+  width: 150px;
+  background-color: var(--color-1);
+  color: var(--color-white);
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  main {
+    padding: 2rem;
+  }
+
+  #contact-form {
+    width: 100%;
+  }
+}

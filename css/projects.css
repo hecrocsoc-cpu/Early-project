@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  max-width: 1200px;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-5);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --font-main: "Roboto", sans-serif;
+  --color-1: #072ac8;
+  --color-2: #43d2ff;
+  --color-3: #a2d6f9;
+  --color-4: #d1edff;
+  --color-5: #292e47;
+  --color-6: #6b708d;
+  --color-7: #f2f4fc;
+  --color-8: #ecf7ff;
+  --color-9: #ffc600;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-wrong: #b33a3a;
+  --color-right: #28a428;
+}
+
+
+
+.project-image{
+    max-width: 980px;
+    margin-left: 3rem;
+    padding: 1rem;
+    max-height:none;
+}
+
+.project-title{
+    margin-left: 3rem;
+    padding: 1rem;
+}
+.subtitle{
+    padding: 1rem 0 1rem 0;
+    display: flex;
+    margin-left: 0;
+    justify-content: space-between;
+}
+
+.UI{
+    flex: 1;
+    margin-left: 4rem;
+}
+
+.date{
+    margin-right: 12rem;
+}
+
+.article-project{
+    padding: 2rem;
+    margin: 0;
+    margin-right: 9rem;
+    margin-left: 2rem;
+    background-color: var(--color-white);
+    font-weight: 400;
+    text-shadow: 2px 2px 4px var(--color-5) ;
+    
+}
+
+.article-project p{
+    color: var(--color-6);
+}
+
+.projects-grid{
+    margin-right: 7rem;
+}
