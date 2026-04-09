@@ -1,6 +1,11 @@
 /* MAIN */
 main {
   padding: 4rem;
+  main {
+  padding: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 }
 
 main h1 {
@@ -9,21 +14,20 @@ main h1 {
 
 /* FORM */
 #contact-form {
-width: 100%;  
-max-width: 600px;
-display: flex;
-flex-direction: column;
-gap: 2rem;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
 }
-#name{
-    max-width: 1200px;
-}
+
 /* CAMPOS */
 .field {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 1200px;
+  width: 100%;
 }
 
 .field label {
@@ -32,13 +36,13 @@ gap: 2rem;
 
 .field input,
 .field textarea {
-width: 100%;
-max-width: none;
-border: none;
-background-color: var(--color-7);
-padding: 1rem;
-border-radius: 4px;
-font-size: 1rem;
+  width: 100%;
+  max-width: none;
+  border: none;
+  background-color: var(--color-7);
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
 /* TEXTAREA */
@@ -66,6 +70,47 @@ font-size: 1rem;
   }
 
   #contact-form {
+    width: 100%;
+  }
+}
+/* VALIDACIÓN */
+.field input.error,
+.field textarea.error {
+  border: 2px solid var(--color-wrong);
+}
+
+.field input.success,
+.field textarea.success {
+  border: 2px solid var(--color-right);
+}
+
+.error-msg {
+  color: var(--color-wrong);
+  font-size: 0.85rem;
+}
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1024px) {
+  main {
+    padding: 3rem;
+  }
+
+  #contact-form {
+    max-width: 100%;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  main {
+    padding: 2rem;
+  }
+
+  #contact-form {
+    max-width: 100%;
+  }
+
+  #contact-form button {
     width: 100%;
   }
 }

@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 * {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  max-width: 1200px;
 }
 
 body {
+  max-width: 1200px;
+  margin: 0 auto;
   font-family: var(--font-main);
   color: var(--color-5);
 }
@@ -40,7 +41,9 @@ ul {
 }
 
 nav {
-  margin: 0 2rem 0 2rem;
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,11 +56,10 @@ nav {
 }
 
 .menu {
-  margin-left: 300px;
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  justify-content: flex-end;
+  margin: 0 auto;
 }
 
 .menu a:hover {
@@ -129,7 +131,8 @@ nav {
   display: flex;
   flex-direction: row;
   padding: 4rem;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .partners img {
@@ -158,11 +161,14 @@ nav {
   gap: 2rem;
   justify-content: space-between;
 }
+
 .project-wrapper {
   margin: 0;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
 }
-
 .project-card {
   flex: 1;
   background: var(--color-white);
@@ -308,10 +314,12 @@ nav {
 .service-card img {
   background-color: var(--color-4);
   border-radius: 50%;
-  padding: 0.5rem;
-  width: 40px;
-  height: 40px;
+  padding: 8px;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
   margin: 0 0 1rem 0;
+  overflow: visible;
 }
 
 .service-card h4 {
@@ -453,19 +461,19 @@ footer {
 }
 
 @media (max-width: 768px) {
+  nav {
+  justify-content: center !important;
+  position: relative;
+  padding: 1rem 2rem;
+}
+
   .hamburger {
     display: block;
-  }
 
-  /* HEADER */
+  }
 
   .logo {
     display: none;
-  }
-
-  nav {
-    justify-content: center;
-    position: relative;
   }
 
   .menu {
@@ -487,7 +495,7 @@ footer {
     margin: 0;
   }
 
-  nav > button:not(.hamburger) {
+.nav-button { 
     display: none;
   }
 
