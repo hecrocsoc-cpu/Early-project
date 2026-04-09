@@ -1,28 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-  max-width: 1200px;
-  margin: 0 auto;
-  font-family: var(--font-main);
-  color: var(--color-5);
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-}
-
 :root {
   --font-main: "Roboto", sans-serif;
   --color-1: #072ac8;
@@ -40,6 +17,28 @@ ul {
   --color-right: #28a428;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--color-5);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
 nav {
   margin: 0;
   max-width: 100%;
@@ -48,9 +47,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  color: #072ac8;
+  color: var(--color-1);
   font-weight: 600;
 }
+
 .logo {
   margin: 0;
 }
@@ -67,14 +67,15 @@ nav {
 }
 
 .nav-button {
-  background-color: #072ac8;
-  color: white;
+  background-color: var(--color-1);
+  color: var(--color-white);
   border: none;
   padding: 0.75rem 1.5rem;
   cursor: pointer;
   border-radius: 4px;
   display: inline-block;
 }
+
 /* HERO */
 .hero {
   margin: 60px auto;
@@ -94,8 +95,8 @@ nav {
 }
 
 .hero-button {
-  background-color: #072ac8;
-  color: white;
+  background-color: var(--color-1);
+  color: var(--color-white);
   border: none;
   padding: 0.75rem 1.5rem;
   cursor: pointer;
@@ -103,6 +104,7 @@ nav {
   display: inline-block;
   margin: 2rem 2rem 0 0;
 }
+
 .hero-images {
   flex: 1;
   position: relative;
@@ -126,7 +128,7 @@ nav {
   right: 3%;
 }
 
-/* client section */
+/* PARTNERS */
 .partners {
   display: flex;
   flex-direction: row;
@@ -142,8 +144,6 @@ nav {
 .partners img:hover {
   filter: grayscale(0);
 }
-
-/*Recents Projects/*
 
 /* RECENT PROJECTS */
 .recent-projects {
@@ -169,6 +169,7 @@ nav {
   height: 100%;
   color: inherit;
 }
+
 .project-card {
   flex: 1;
   background: var(--color-white);
@@ -188,7 +189,7 @@ nav {
 
 .project-card h4 {
   margin-bottom: 0.5rem;
-  color: black;
+  color: var(--color-black);
 }
 
 .project-card p {
@@ -205,7 +206,7 @@ nav {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/*Testimonial*/
+/* TESTIMONIAL */
 .testimonial {
   height: 622px;
   background-color: var(--color-5);
@@ -218,6 +219,7 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .testimonial-content {
   margin-top: 4rem;
 }
@@ -236,6 +238,7 @@ nav {
 .emoji {
   width: 150px;
 }
+
 .emoji-1 {
   position: absolute;
   top: 10%;
@@ -284,6 +287,7 @@ nav {
 .author-name {
   color: var(--color-3);
 }
+
 .author-company {
   color: var(--color-white);
 }
@@ -449,7 +453,6 @@ footer {
 }
 
 /* RESPONSIVE */
-
 .hamburger {
   display: none;
   background: none;
@@ -462,7 +465,7 @@ footer {
 
 @media (max-width: 768px) {
   nav {
-    justify-content: center !important;
+    justify-content: center;
     position: relative;
     padding: 1rem 2rem;
   }
@@ -488,7 +491,7 @@ footer {
   }
 
   .menu.active {
-    display: flex !important;
+    display: flex;
     left: 0;
     right: 0;
     margin: 0;
@@ -501,7 +504,6 @@ footer {
   }
 
   /* HERO */
-
   .hero {
     flex-direction: column;
   }
@@ -520,39 +522,34 @@ footer {
   }
 
   /* PARTNERS */
-
   .partners {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
     padding: 2rem;
   }
+
   .projects-grid {
     flex-direction: column;
   }
 
-  .project-card {
-    width: 100%;
-  }
-
   /* TESTIMONIALS */
-
   .emoji {
     display: none;
   }
 
-.testimonial {
+  .testimonial {
     background-size: cover;
     background-position: center;
     height: auto;
     padding: 4rem 2rem;
   }
+
   .testimonial-content {
     margin-top: 2rem;
   }
 
-  /* services */
-
+  /* SERVICES */
   .services-grid {
     flex-direction: column;
   }
@@ -562,7 +559,6 @@ footer {
   }
 
   /* FOOTER */
-
   footer {
     flex-direction: column;
     align-items: flex-start;
@@ -603,6 +599,7 @@ footer {
   .project-card {
     width: 45%;
   }
+
   .testimonial {
     background-position: center;
   }

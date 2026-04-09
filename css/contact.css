@@ -1,11 +1,8 @@
 /* MAIN */
 main {
   padding: 4rem;
-  main {
-  padding: 4rem;
   max-width: 1200px;
   margin: 0 auto;
-}
 }
 
 main h1 {
@@ -63,16 +60,6 @@ main h1 {
   cursor: pointer;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  main {
-    padding: 2rem;
-  }
-
-  #contact-form {
-    width: 100%;
-  }
-}
 /* VALIDACIÓN */
 .field input.error,
 .field textarea.error {

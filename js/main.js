@@ -1,16 +1,37 @@
 const hamburger = document.querySelector(".hamburger");
 const menu = document.querySelector(".menu");
 
-hamburger.addEventListener("click", () => {
+hamburger?.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 
 const API_URL =
   "https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects";
 
+function createProjectCard(p, href) {
+  return `
+    <article class="project-card">
+      <a class="project-wrapper" href="${href}">
+        <img src="${p.image}" alt="${p.name}" />
+        <div>
+          <h4>${p.name}</h4>
+          <p>${p.description}</p>
+          <span>Learn more</span>
+        </div>
+      </a>
+    </article>`;
+}
+
 async function loadProjects() {
-  const res = await fetch(API_URL);
-  const projects = await res.json();
+  let projects;
+  try {
+    const res = await fetch(API_URL);
+    if (!res.ok) throw new Error("Network error");
+    projects = await res.json();
+  } catch (err) {
+    console.error("Failed to load projects:", err);
+    return;
+  }
 
   const projectSection = document.getElementById("projects");
 
@@ -41,20 +62,7 @@ async function loadProjects() {
     const grid = document.querySelector("#RecentProjects .projects-grid");
     if (grid) {
       grid.innerHTML = otherProjects
-        .map(
-          (p) => `
-        <article class="project-card">
-          <a class="project-wrapper" href="1.html?uuid=${p.uuid}">
-            <img src="${p.image}" alt="${p.name}" />
-            <div>
-              <h4>${p.name}</h4>
-              <p>${p.description}</p>
-              <span>Learn more</span>
-            </div>
-          </a>
-        </article>
-      `,
-        )
+        .map((p) => createProjectCard(p, `1.html?uuid=${p.uuid}`))
         .join("");
     }
   } else {
@@ -62,26 +70,13 @@ async function loadProjects() {
     if (homeGrid) {
       homeGrid.innerHTML = projects
         .slice(0, 3)
-        .map(
-          (p) => `
-        <article class="project-card">
-          <a class="project-wrapper" href="projects/1.html?uuid=${p.uuid}">
-            <img src="${p.image}" alt="${p.name}" />
-            <div>
-              <h4>${p.name}</h4>
-              <p>${p.description}</p>
-              <span>Learn more</span>
-            </div>
-          </a>
-        </article>
-      `,
-        )
+        .map((p) => createProjectCard(p, `projects/1.html?uuid=${p.uuid}`))
         .join("");
     }
   }
 }
 
-window.onload = loadProjects;
+document.addEventListener("DOMContentLoaded", loadProjects);
 
 const contactForm = document.getElementById("contact-form");
 if (contactForm) {
