@@ -140,6 +140,9 @@ if (contactForm) {
     } else clearError(messageInput);
 
     if (valid) {
+      console.log("Formulario enviado con datos:");
+      console.log({ name, email, phone, message });
+      
       alert("Message sent successfully!");
       contactForm.reset();
       [nameInput, emailInput, phoneInput, messageInput].forEach((i) => {
