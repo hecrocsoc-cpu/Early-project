@@ -60,8 +60,17 @@
 }
 
 @media (max-width: 1024px) {
+
+  .logo{
+    margin-left: -1.5rem;
+  }
+
+  .nav-button{
+    margin-right: -0.5rem;
+  }
   .project-image {
-    max-width: 90%;
+    max-width: 95%;
+    width: 95%;
     margin-left: 1rem;
     padding: 0.5rem;
   }
@@ -72,6 +81,7 @@
   }
 
   .subtitle {
+    margin-left: 0.5rem;
     flex-direction: column;
     align-items: flex-start;
     padding: 0.5rem 0;
@@ -82,51 +92,60 @@
   }
 
   .date {
+    margin-left: 1rem;
     margin-right: 1rem;
     margin-top: 0.5rem;
   }
 
   .article-project {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 0.5rem;
+    margin-right:1rem;
     padding: 1rem;
   }
-
+  
+  .recent-projects h2{
+    text-align: center ;
+  }
+  
   .projects-grid {
     margin-right: 1rem;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
   }
 
   .contact-bar {
-    width: 95%;
+    width: 100%;
     min-width: auto;
-    margin-left: 0.5rem;
     padding: 4rem 2rem;
   }
 }
 
 @media (max-width: 768px) {
+
+
   .project-image {
-    max-width: 100%;
-    margin-left: 0.5rem;
+    max-width: 95%;
+    width: 93%;
+    margin-left: 1rem;
     padding: 0.5rem;
   }
 
   .project-title {
-    margin-left: 0.5rem;
+    margin-left: 1rem;
     padding: 0.5rem;
   }
 
   .subtitle {
+    margin-left: 0.5rem;
     flex-direction: column;
+    align-items: flex-start;
     padding: 0.5rem 0;
   }
 
   .UI {
-    margin-left: 0;
+    margin-left: 1rem;
   }
-
   .date {
     margin-right: 0;
     margin-top: 0.5rem;
@@ -134,8 +153,8 @@
 
   .article-project {
     margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    padding: 0.5rem;
+    margin-right:0.5rem;
+    padding: 1rem;
   }
 
   .projects-grid {

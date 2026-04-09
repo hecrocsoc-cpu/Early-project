@@ -462,14 +462,13 @@ footer {
 
 @media (max-width: 768px) {
   nav {
-  justify-content: center !important;
-  position: relative;
-  padding: 1rem 2rem;
-}
+    justify-content: center !important;
+    position: relative;
+    padding: 1rem 2rem;
+  }
 
   .hamburger {
     display: block;
-
   }
 
   .logo {
@@ -493,9 +492,11 @@ footer {
     left: 0;
     right: 0;
     margin: 0;
+    text-align: center;
+    align-items: center;
   }
 
-.nav-button { 
+  .nav-button {
     display: none;
   }
 
@@ -540,11 +541,12 @@ footer {
     display: none;
   }
 
-  .testimonial {
-    background-size: contain;
+.testimonial {
+    background-size: cover;
     background-position: center;
+    height: auto;
+    padding: 4rem 2rem;
   }
-
   .testimonial-content {
     margin-top: 2rem;
   }
@@ -600,6 +602,9 @@ footer {
 
   .project-card {
     width: 45%;
+  }
+  .testimonial {
+    background-position: center;
   }
 
   .testimonial-content {
