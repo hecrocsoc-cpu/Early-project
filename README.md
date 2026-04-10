@@ -3,6 +3,10 @@
 ## Description
    Responsive website for a digital agency with dynamic projects and contact form.
 
+## Motivation
+Circle Agency needed a responsive online presence to showcase their projects,
+attract new clients and provide an easy way to get in touch with the team.
+
 ## Folder structure
     /Early project
     │── index.html
@@ -44,4 +48,12 @@ No installation needed. Open `index.html` in a browser or use Live Server.
 - Claude (Sonnet 4.6).
 - Chat GPT (5.3).
 - GitHub.
-- Netlify
+- Netlify.
+
+## Backlog
+- Custom 404 page.
+- Random project selection in "Other Projects".
+- Dynamic project filtering.
+
+## URL
+- https://lovely-phoenix-1bbf9e.netlify.app/
